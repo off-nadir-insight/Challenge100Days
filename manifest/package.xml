@@ -24,6 +24,8 @@
         <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
+        <members>Day001_Band_Name_Generator</members>
+        <name>FlexiPage</name>
     <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
