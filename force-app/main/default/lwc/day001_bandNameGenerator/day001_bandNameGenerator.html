@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Generate a band name">
+        <div class="slds-var-p-around_medium">
+            <lightning-input
+                type="text"
+                name="cityName"
+                label="Enter the name of a city"
+                value={cityName}
+                onchange={handleCityNameChange}
+            ></lightning-input>
+            <lightning-input
+                type="text"
+                name="animalName"
+                label="Enter the name of an animal"
+                value={animalName}
+                onchange={handleAnimalNameChange}
+            ></lightning-input>
+            <div class="slds-var-m-around_medium slds-text-align_center">
+                <lightning-button
+                    label="Generate Name"
+                    variant="brand"
+                    onclick={generateBandName}
+                ></lightning-button>
+            </div>
+            <lightning-layout horizontal-align="space" multiple-rows="true">
+                <lightning-layout-item padding="around-medium" size="12">
+                    <template lwc:if={bandName}>
+                        <p class="
+                            slds-text-heading_large 
+                            slds-align_absolute-center
+                        ">
+                            Your new band is called {bandName}!
+                        </p>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <div slot="footer">
+
+        </div>
+    </lightning-card>
+</template>
